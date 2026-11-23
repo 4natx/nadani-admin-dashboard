@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel demonstrativo Nadani Commerce para estoque, clientes, vendas e relatórios.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Nadani Admin Dashboard</title>
+  <link rel="icon" href="./assets/brand.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir para o conteúdo</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#overview"><img src="./assets/brand.svg" alt="" width="39" height="39"><span>Nadani <strong>Admin Dashboard</strong></span></a>
+    <div class="workspace-card"><span class="workspace-mark"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#inventory"></use></svg></span><span><strong id="company-name">Nadani Commerce</strong><small>Espaço demonstrativo</small></span></div>
+    <nav aria-label="Navegação principal">
+      <p class="nav-caption">GESTÃO</p>
+      <a href="#overview" data-route="overview"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#home"></use></svg>Visão geral</a>
+      <a href="#products" data-route="products"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#box"></use></svg>Produtos</a>
+      <a href="#inventory" data-route="inventory"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#inventory"></use></svg>Estoque</a>
+      <a href="#customers" data-route="customers"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#people"></use></svg>Clientes</a>
+      <a href="#sales" data-route="sales"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#cart"></use></svg>Vendas</a>
+      <p class="nav-caption">INSIGHTS</p><a href="#analytics" data-route="analytics"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#analytics"></use></svg>Análises</a>
+      <a href="#reports" data-route="reports"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#report"></use></svg>Relatórios</a>
+      <p class="nav-caption">PREFERÊNCIAS</p><a href="#settings" data-route="settings"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#settings"></use></svg>Configurações</a>
+    </nav>
+    <div class="sidebar-footer"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#lock"></use></svg><span><strong>Dados locais</strong><small>Armazenados neste navegador</small></span></div>
+  </aside>
+  <div class="workspace" id="workspace">
+    <header class="topbar">
+      <div class="trail"><button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#menu"></use></svg></button>
+        <span class="trail-parent">Painel administrativo</span><span class="trail-parent" aria-hidden="true">/</span><strong id="breadcrumb">Visão geral</strong></div>
+      <div class="actions header-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Alternar tema"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#moon"></use></svg></button>
+        <button class="button primary" id="quick-sale" type="button"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#plus"></use></svg> Nova venda</button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <noscript><p class="banner">Ative o JavaScript para usar o painel local.</p></noscript>
+      <div class="banner" id="storage-alert" role="alert" hidden></div>
+      <div id="screen" aria-busy="true"><p class="muted" role="status">Abrindo o armazenamento local…</p></div>
+    </main>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title">
+    <div class="modal-head"><h2 id="modal-title" tabindex="-1"></h2><button class="icon-button" type="button" data-close aria-label="Fechar janela"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#close"></use></svg></button></div>
+    <div id="modal-body"></div>
+  </dialog>
+  <section id="print-area" aria-label="Documento para impressão" hidden></section>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
