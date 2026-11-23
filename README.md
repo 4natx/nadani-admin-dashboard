@@ -90,16 +90,4 @@ O painel é uma demonstração local, sem autenticação, processamento de pagam
 
 A conciliação trabalha sobre um snapshot único, adequado a este projeto de portfólio. Limites de cadastros e movimentações ficam em `js/model.js`. Dispositivos físicos, leitores de tela e motores de navegador diferentes do Chrome ficaram pendentes.
 
-## Publicação no GitHub Pages
-
-1. Quando autorizado, crie o repositório público `nadani-admin-dashboard` e envie os arquivos para a branch `main`.
-2. No repositório, abra **Settings → Pages**. Em **Build and deployment**, escolha **Deploy from a branch**, selecione **main** e **/(root)** e salve.
-3. Abra o endereço mostrado pelo Pages e teste a inicialização do IndexedDB. A URL padrão é `https://<usuário>.github.io/nadani-admin-dashboard/`.
-
-As rotas usam fragmentos. Caminhos relativos e `.nojekyll` permitem servir a aplicação em subdiretório. [Documentação oficial do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-
-### Descrição do repositório
-
-> Professional business management dashboard built with JavaScript, featuring inventory control, customer management, sales analytics and interactive reports.
-
 [Developed by Nadani Productions](https://nadani.space)
